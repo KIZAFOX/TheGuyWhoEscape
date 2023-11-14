@@ -46,8 +46,17 @@ public class Game{
 
     public void update(){
         switch (GameStatus.STATUS){
-            case MENU -> this.menu.update();
-            case PLAYING -> this.playing.update();
+            case MENU:
+                this.menu.update();
+                break;
+            case PLAYING:
+                this.playing.update();
+                break;
+            case OPTIONS:
+            case QUIT:
+            default:
+                System.exit(0);
+                break;
         }
     }
 
