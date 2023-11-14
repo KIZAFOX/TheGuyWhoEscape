@@ -1,13 +1,13 @@
 package fr.kizafox.theguywhoescape.game.client.window;
 
-import fr.kizafox.theguywhoescape.game.client.window.inputs.KeyBoardInputs;
-import fr.kizafox.theguywhoescape.game.client.window.inputs.MouseInputs;
+import fr.kizafox.theguywhoescape.game.client.inputs.KeyBoardInputs;
+import fr.kizafox.theguywhoescape.game.client.inputs.MouseInputs;
 
 import javax.swing.*;
 import javax.swing.plaf.ComponentUI;
 import java.awt.*;
 
-import static fr.kizafox.theguywhoescape.game.client.window.settings.GameSettings.*;
+import static fr.kizafox.theguywhoescape.game.client.settings.GameSettings.*;
 
 /**
  * Change this line to a short description of the class
