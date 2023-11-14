@@ -1,4 +1,4 @@
-package fr.kizafox.theguywhoescape.game.client.window.inputs;
+package fr.kizafox.theguywhoescape.game.client.inputs;
 
 import fr.kizafox.theguywhoescape.game.client.window.GamePanel;
 import fr.kizafox.theguywhoescape.game.status.GameStatus;

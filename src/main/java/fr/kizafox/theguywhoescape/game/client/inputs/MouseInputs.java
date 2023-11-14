@@ -1,4 +1,4 @@
-package fr.kizafox.theguywhoescape.game.client.window.inputs;
+package fr.kizafox.theguywhoescape.game.client.inputs;
 
 import fr.kizafox.theguywhoescape.game.client.window.GamePanel;
 import fr.kizafox.theguywhoescape.game.status.GameStatus;
@@ -28,9 +28,8 @@ public class MouseInputs implements MouseListener, MouseMotionListener {
      */
     @Override
     public void mouseClicked(final MouseEvent event) {
-        switch (GameStatus.STATUS){
-            case MENU -> this.gamePanel.getGame().getMenu().mouseClicked(event);
-            case PLAYING -> this.gamePanel.getGame().getPlaying().mouseClicked(event);
+        if (GameStatus.STATUS.equals(GameStatus.PLAYING)) {
+            this.gamePanel.getGame().getPlaying().mouseClicked(event);
         }
     }
 
@@ -41,7 +40,10 @@ public class MouseInputs implements MouseListener, MouseMotionListener {
      */
     @Override
     public void mousePressed(final MouseEvent event) {
-
+        switch (GameStatus.STATUS){
+            case MENU -> this.gamePanel.getGame().getMenu().mousePressed(event);
+            case PLAYING -> this.gamePanel.getGame().getPlaying().mousePressed(event);
+        }
     }
 
     /**
@@ -51,7 +53,10 @@ public class MouseInputs implements MouseListener, MouseMotionListener {
      */
     @Override
     public void mouseReleased(final MouseEvent event) {
-
+        switch (GameStatus.STATUS){
+            case MENU -> this.gamePanel.getGame().getMenu().mouseReleased(event);
+            case PLAYING -> this.gamePanel.getGame().getPlaying().mouseReleased(event);
+        }
     }
 
     /**
@@ -100,6 +105,9 @@ public class MouseInputs implements MouseListener, MouseMotionListener {
      */
     @Override
     public void mouseMoved(final MouseEvent event) {
-
+        switch (GameStatus.STATUS){
+            case MENU -> this.gamePanel.getGame().getMenu().mouseMoved(event);
+            case PLAYING -> this.gamePanel.getGame().getPlaying().mouseMoved(event);
+        }
     }
 }

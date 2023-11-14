@@ -1,4 +1,4 @@
-package fr.kizafox.theguywhoescape.game.client.window.settings;
+package fr.kizafox.theguywhoescape.game.client.settings;
 
 /**
  * Change this line to a short description of the class
