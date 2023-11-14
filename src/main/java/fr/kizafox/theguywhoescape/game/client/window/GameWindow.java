@@ -7,7 +7,7 @@ import java.awt.*;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowFocusListener;
 
-import static fr.kizafox.theguywhoescape.game.client.window.settings.GameSettings.*;
+import static fr.kizafox.theguywhoescape.game.client.settings.GameSettings.*;
 
 /**
  * Change this line to a short description of the class
