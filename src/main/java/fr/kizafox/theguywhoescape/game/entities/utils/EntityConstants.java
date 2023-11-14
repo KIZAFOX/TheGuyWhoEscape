@@ -1,5 +1,7 @@
 package fr.kizafox.theguywhoescape.game.entities.utils;
 
+import fr.kizafox.theguywhoescape.game.client.settings.GameSettings;
+
 /**
  * Change this line to a short description of the class
  *
@@ -8,6 +10,16 @@ package fr.kizafox.theguywhoescape.game.entities.utils;
  * @project : TheGuyWhoEscape
  */
 public class EntityConstants {
+    public static class UI{
+        public static class Buttons{
+            public static final int
+                    B_WIDTH_DEFAULT = 140,
+                    B_HEIGHT_DEFAULT = 56,
+                    B_WIDTH = (int) (B_WIDTH_DEFAULT * GameSettings.SCALE),
+                    B_HEIGHT = (int) (B_HEIGHT_DEFAULT * GameSettings.SCALE);
+        }
+    }
+
     public static class PlayerConstants{
         public static final int
                 IDLE = 0,
