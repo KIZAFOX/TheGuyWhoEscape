@@ -31,11 +31,11 @@ public abstract class Entity {
     public abstract void render(final Graphics graphics);
 
     protected void renderHitBox(final Graphics graphics){
-        graphics.setColor(Color.YELLOW);
+        graphics.setColor(Color.RED);
         graphics.drawRect((int) this.hitBox.x, (int) this.hitBox.y, (int) this.hitBox.width, (int) this.hitBox.height);
     }
 
-    protected void initHitBox(final float x, final float y, final float width, final float height){
+    protected void initHitBox(final float x, final float y, final int width, final int height){
         this.hitBox = new Rectangle2D.Float(x, y, width, height);
     }
 
