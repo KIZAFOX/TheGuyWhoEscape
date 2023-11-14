@@ -4,8 +4,6 @@ import fr.kizafox.theguywhoescape.game.client.window.Game;
 
 import java.awt.*;
 
-import static fr.kizafox.theguywhoescape.game.client.window.settings.GameSettings.*;
-
 /**
  * Change this line to a short description of the class
  *
@@ -25,7 +23,6 @@ public class FPSChecker implements Runnable{
             frames = 0,
             currentFPS = 0,
             updates = 0;
-
 
     public FPSChecker(final Game game) {
         this.game = game;
@@ -71,6 +68,12 @@ public class FPSChecker implements Runnable{
 
     public void getFPS(final Graphics graphics) {
         graphics.setColor(Color.BLACK);
-        graphics.drawString("FPS: " + currentFPS, GAME_WIDTH / 2, 200);
+
+        final Font originalFont = graphics.getFont();
+        final Font largerFont = originalFont.deriveFont(originalFont.getSize() * 1.5F);
+
+        graphics.setFont(largerFont);
+        graphics.drawString("FPS: " + currentFPS, 10, 20);
+        graphics.setFont(originalFont);
     }
 }
