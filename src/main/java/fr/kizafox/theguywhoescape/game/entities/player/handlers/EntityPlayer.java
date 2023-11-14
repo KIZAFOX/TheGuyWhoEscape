@@ -4,7 +4,7 @@ import fr.kizafox.theguywhoescape.game.entities.utils.EntityConstants;
 
 import java.awt.image.BufferedImage;
 
-import static fr.kizafox.theguywhoescape.game.client.window.settings.GameSettings.SCALE;
+import static fr.kizafox.theguywhoescape.game.client.settings.GameSettings.SCALE;
 
 /**
  * Change this line to a short description of the class
@@ -15,6 +15,6 @@ import static fr.kizafox.theguywhoescape.game.client.window.settings.GameSetting
  */
 public abstract class EntityPlayer extends CraftPlayer {
     public EntityPlayer() {
-        super(new BufferedImage[9][6], 0, 0, EntityConstants.PlayerConstants.IDLE, false, false, false, false, false, false, new int[0][0], 21 * SCALE, 4 * SCALE, 0F, .04F * SCALE, -2.25F * SCALE, .5F * SCALE, 2F);
+        super(new BufferedImage[9][6], 0, 0, EntityConstants.PlayerConstants.IDLE, false, false, false, false, false, false, new int[0][0], 21 * SCALE, 4 * SCALE, 0F, .04F * SCALE, -2.25F * SCALE, .5F * SCALE, 1.35F * SCALE);
     }
 }
