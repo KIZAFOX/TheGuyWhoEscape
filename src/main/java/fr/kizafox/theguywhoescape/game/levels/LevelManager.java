@@ -6,7 +6,7 @@ import fr.kizafox.theguywhoescape.game.utils.ImageRenderer;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-import static fr.kizafox.theguywhoescape.game.client.window.settings.GameSettings.*;
+import static fr.kizafox.theguywhoescape.game.client.settings.GameSettings.*;
 
 /**
  * Change this line to a short description of the class
