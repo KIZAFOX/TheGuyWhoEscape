@@ -2,7 +2,7 @@ package fr.kizafox.theguywhoescape.game.entities.utils;
 
 import java.awt.geom.Rectangle2D;
 
-import static fr.kizafox.theguywhoescape.game.client.window.settings.GameSettings.*;
+import static fr.kizafox.theguywhoescape.game.client.settings.GameSettings.*;
 
 /**
  * Change this line to a short description of the class
