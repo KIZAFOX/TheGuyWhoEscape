@@ -7,9 +7,9 @@ import fr.kizafox.theguywhoescape.game.utils.ImageRenderer;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-import static fr.kizafox.theguywhoescape.game.client.window.settings.GameSettings.*;
 import static fr.kizafox.theguywhoescape.game.entities.utils.EntityConstants.PlayerConstants.*;
 import static fr.kizafox.theguywhoescape.game.entities.utils.EntityHelper.*;
+import static fr.kizafox.theguywhoescape.game.client.settings.GameSettings.*;
 
 /**
  * Change this line to a short description of the class
@@ -21,7 +21,7 @@ import static fr.kizafox.theguywhoescape.game.entities.utils.EntityHelper.*;
 public class Player extends EntityPlayer {
 
     public Player() {
-        this.initHitBox(x, y, 20 * SCALE, 27 * SCALE);
+        this.initHitBox(x, y, (int) (20 * SCALE), (int) (27 * SCALE));
 
         final BufferedImage playerImage = ImageRenderer.loadSprite(ImageRenderer.PLAYER_ATLAS);
 
