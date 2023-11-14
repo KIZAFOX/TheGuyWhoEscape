@@ -4,7 +4,7 @@ import fr.kizafox.theguywhoescape.game.entities.Entity;
 
 import java.awt.image.BufferedImage;
 
-import static fr.kizafox.theguywhoescape.game.client.window.settings.GameSettings.SCALE;
+import static fr.kizafox.theguywhoescape.game.client.settings.GameSettings.SCALE;
 
 /**
  * Change this line to a short description of the class
@@ -19,7 +19,7 @@ public abstract class CraftPlayer extends Entity {
     public int animationTick, animationIndex, playerAction;
     public boolean moving, attacking, left, right, jump, inAir;
     public int[][] levelData;
-    public float xDrawOffset, yDrawOffset, airSpeed,  gravity, jumpSpeed, fallSpeedAfterCollision, speed;
+    public float xDrawOffset, yDrawOffset, airSpeed, gravity, jumpSpeed, fallSpeedAfterCollision, speed;
 
     public CraftPlayer(BufferedImage[][] animations, int animationTick, int animationIndex, int playerAction, boolean moving, boolean attacking, boolean left, boolean right, boolean jump, boolean inAir, int[][] levelData, float xDrawOffset, float yDrawOffset, float airSpeed, float gravity, float jumpSpeed, float fallSpeedAfterCollision, float speed) {
         super(200, 200, (int) (64 * SCALE), (int) (40 * SCALE));
