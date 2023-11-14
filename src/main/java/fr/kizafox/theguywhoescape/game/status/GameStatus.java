@@ -9,7 +9,7 @@ package fr.kizafox.theguywhoescape.game.status;
  */
 public enum GameStatus {
 
-    MENU, PLAYING;
+    MENU, PLAYING, OPTIONS, QUIT;
 
     public static GameStatus STATUS = MENU;
 }
