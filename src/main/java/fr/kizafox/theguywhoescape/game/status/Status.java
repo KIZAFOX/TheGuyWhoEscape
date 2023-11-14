@@ -1,6 +1,9 @@
 package fr.kizafox.theguywhoescape.game.status;
 
 import fr.kizafox.theguywhoescape.game.client.window.Game;
+import fr.kizafox.theguywhoescape.game.client.window.ui.MenuButton;
+
+import java.awt.event.MouseEvent;
 
 /**
  * Change this line to a short description of the class
@@ -15,6 +18,10 @@ public class Status {
 
     public Status(final Game game) {
         this.game = game;
+    }
+
+    public boolean isIn(final MouseEvent mouseEvent, MenuButton menuButton){
+        return menuButton.getBounds().contains(mouseEvent.getX(), mouseEvent.getY());
     }
 
     public Game getGame() {
