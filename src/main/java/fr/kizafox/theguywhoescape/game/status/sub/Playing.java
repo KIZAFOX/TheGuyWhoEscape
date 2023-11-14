@@ -11,8 +11,6 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
-import static fr.kizafox.theguywhoescape.game.client.window.settings.GameSettings.*;
-
 /**
  * Change this line to a short description of the class
  *
@@ -30,7 +28,7 @@ public class Playing extends Status implements StatusCore {
 
         this.levelManager = new LevelManager(this.getGame());
         this.player = new Player();
-        this.player.setLevelData(this.levelManager.getCurrentLevel().getLevelData());
+        this.player.setLevelData(this.levelManager.getCurrentLevel().levelData());
     }
 
     @Override
