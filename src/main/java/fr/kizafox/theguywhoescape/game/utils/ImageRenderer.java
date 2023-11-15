@@ -17,11 +17,18 @@ import static fr.kizafox.theguywhoescape.game.client.settings.GameSettings.*;
 public class ImageRenderer {
 
     public static final String PLAYER_ATLAS = "player_sprites.png";
+
     public static final String LEVEL_ATLAS = "outside_sprites.png";
-    public static final String LEVEL_ONE_DATA = "level_one_data.png";
+    //public static final String LEVEL_ONE_DATA = "level_one_data.png";
+    public static final String LEVEL_ONE_DATA = "level_one_data_long.png";
 
     public static final String MENU_BACKGROUND = "menu_background.png";
     public static final String MENU_BUTTONS = "button_atlas.png";
+
+    public static final String PAUSE_BACKGROUND = "pause_menu.png";
+    public static final String SOUND_BUTTONS = "sound_button.png";
+    public static final String URM_BUTTONS = "urm_buttons.png";
+    public static final String VOLUME_BUTTONS = "volume_buttons.png";
 
     public static BufferedImage loadSprite(final String fileName){
         final InputStream inputStream = ImageRenderer.class.getResourceAsStream("/" + fileName);
@@ -46,8 +53,8 @@ public class ImageRenderer {
     }
 
     public static int[][] getLevelData() {
-        final int[][] levelData = new int[TILES_IN_HEIGHT][TILES_IN_WIDTH];
         final BufferedImage image = loadSprite(LEVEL_ONE_DATA);
+        final int[][] levelData = new int[image.getHeight()][image.getWidth()];
 
         for(int i = 0; i < image.getHeight(); i++){
             for(int j = 0; j < image.getWidth(); j++){

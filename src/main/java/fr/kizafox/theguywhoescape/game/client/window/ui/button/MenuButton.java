@@ -1,4 +1,4 @@
-package fr.kizafox.theguywhoescape.game.client.window.ui;
+package fr.kizafox.theguywhoescape.game.client.window.ui.button;
 
 import fr.kizafox.theguywhoescape.game.status.GameStatus;
 import fr.kizafox.theguywhoescape.game.utils.ImageRenderer;
@@ -29,6 +29,7 @@ public class MenuButton {
         this.yPos = yPos;
         this.rowIndex = rowIndex;
         this.status = status;
+
         this.loadImages();
         this.initBounds();
     }
@@ -46,7 +47,7 @@ public class MenuButton {
         this.bounds = new Rectangle((this.xPos - (B_WIDTH / 2)), yPos, B_WIDTH, B_HEIGHT);
     }
 
-    public void draw(final Graphics graphics){
+    public void render(final Graphics graphics){
         graphics.drawImage(this.images[this.index], (this.xPos - (B_WIDTH / 2)), this.yPos, B_WIDTH, B_HEIGHT, null);
     }
 

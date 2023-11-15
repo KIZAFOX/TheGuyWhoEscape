@@ -2,7 +2,7 @@ package fr.kizafox.theguywhoescape.game.status.sub;
 
 import fr.kizafox.theguywhoescape.game.client.window.Game;
 import fr.kizafox.theguywhoescape.game.client.settings.GameSettings;
-import fr.kizafox.theguywhoescape.game.client.window.ui.MenuButton;
+import fr.kizafox.theguywhoescape.game.client.window.ui.button.MenuButton;
 import fr.kizafox.theguywhoescape.game.status.GameStatus;
 import fr.kizafox.theguywhoescape.game.status.Status;
 import fr.kizafox.theguywhoescape.game.status.StatusCore;
@@ -30,8 +30,15 @@ public class Menu extends Status implements StatusCore {
 
     public Menu(Game game) {
         super(game);
+        this.loadButtons();
         this.loadBackground();
-        this.loadButtons();}
+    }
+
+    private void loadButtons() {
+        this.buttons[0] = new MenuButton(GameSettings.GAME_WIDTH / 2, (int) (150 * GameSettings.SCALE), 0, GameStatus.PLAYING);
+        this.buttons[1] = new MenuButton(GameSettings.GAME_WIDTH / 2, (int) (220 * GameSettings.SCALE), 1, GameStatus.OPTIONS);
+        this.buttons[2] = new MenuButton(GameSettings.GAME_WIDTH / 2, (int) (290 * GameSettings.SCALE), 2, GameStatus.QUIT);
+    }
 
     private void loadBackground() {
         this.backgroundImage = ImageRenderer.loadSprite(ImageRenderer.MENU_BACKGROUND);
@@ -42,12 +49,6 @@ public class Menu extends Status implements StatusCore {
         this.menuY = (int) (45 * GameSettings.SCALE);
     }
 
-    private void loadButtons() {
-        this.buttons[0] = new MenuButton(GameSettings.GAME_WIDTH / 2, (int) (150 * GameSettings.SCALE), 0, GameStatus.PLAYING);
-        this.buttons[1] = new MenuButton(GameSettings.GAME_WIDTH / 2, (int) (220 * GameSettings.SCALE), 1, GameStatus.OPTIONS);
-        this.buttons[2] = new MenuButton(GameSettings.GAME_WIDTH / 2, (int) (290 * GameSettings.SCALE), 2, GameStatus.QUIT);
-    }
-
     @Override
     public void update() {
         Arrays.stream(buttons).forEach(MenuButton::update);
@@ -56,7 +57,7 @@ public class Menu extends Status implements StatusCore {
     @Override
     public void render(Graphics graphics) {
         graphics.drawImage(this.backgroundImage, menuX, menuY, menuWidth, menuHeight, null);
-        Arrays.stream(buttons).forEach(button -> button.draw(graphics));
+        Arrays.stream(buttons).forEach(button -> button.render(graphics));
     }
 
     @Override

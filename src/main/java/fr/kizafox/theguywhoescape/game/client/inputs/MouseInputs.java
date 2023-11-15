@@ -4,6 +4,7 @@ import fr.kizafox.theguywhoescape.game.client.window.GamePanel;
 import fr.kizafox.theguywhoescape.game.status.GameStatus;
 
 import java.awt.event.*;
+import java.util.Objects;
 
 /**
  * Change this line to a short description of the class
@@ -28,7 +29,7 @@ public class MouseInputs implements MouseListener, MouseMotionListener {
      */
     @Override
     public void mouseClicked(final MouseEvent event) {
-        if (GameStatus.STATUS.equals(GameStatus.PLAYING)) {
+        if(GameStatus.STATUS.equals(GameStatus.PLAYING)) {
             this.gamePanel.getGame().getPlaying().mouseClicked(event);
         }
     }
@@ -94,7 +95,9 @@ public class MouseInputs implements MouseListener, MouseMotionListener {
      */
     @Override
     public void mouseDragged(final MouseEvent event) {
-
+        if(GameStatus.STATUS.equals(GameStatus.PLAYING)) {
+            this.gamePanel.getGame().getPlaying().mouseDragged(event);
+        }
     }
 
     /**

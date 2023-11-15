@@ -1,6 +1,6 @@
 package fr.kizafox.theguywhoescape.game.entities.utils;
 
-import fr.kizafox.theguywhoescape.game.client.settings.GameSettings;
+import static fr.kizafox.theguywhoescape.game.client.settings.GameSettings.*;
 
 /**
  * Change this line to a short description of the class
@@ -15,8 +15,31 @@ public class EntityConstants {
             public static final int
                     B_WIDTH_DEFAULT = 140,
                     B_HEIGHT_DEFAULT = 56,
-                    B_WIDTH = (int) (B_WIDTH_DEFAULT * GameSettings.SCALE),
-                    B_HEIGHT = (int) (B_HEIGHT_DEFAULT * GameSettings.SCALE);
+                    B_WIDTH = (int) (B_WIDTH_DEFAULT * SCALE),
+                    B_HEIGHT = (int) (B_HEIGHT_DEFAULT * SCALE);
+        }
+
+        public static class PauseButtons{
+            public static final int
+                    SOUND_SIZE_DEFAULT = 42,
+                    SOUND_SIZE = (int) (SOUND_SIZE_DEFAULT * SCALE);
+        }
+
+        public static class URMButtons{
+            public static final int
+                    URM_SIZE_DEFAULT = 56,
+                    URM_SIZE = (int) (URM_SIZE_DEFAULT * SCALE);
+        }
+
+        public static class VolumeButtons{
+            public static final int
+                    VOLUME_DEFAULT_WIDTH = 28,
+                    VOLUME_DEFAULT_HEIGHT = 44,
+                    SLIDER_DEFAULT_WIDTH = 215,
+
+                    VOLUME_WIDTH = (int) (VOLUME_DEFAULT_WIDTH * SCALE),
+                    VOLUME_HEIGHT = (int) (VOLUME_DEFAULT_HEIGHT * SCALE),
+                    SLIDER_WIDTH = (int) (SLIDER_DEFAULT_WIDTH * SCALE);
         }
     }
 

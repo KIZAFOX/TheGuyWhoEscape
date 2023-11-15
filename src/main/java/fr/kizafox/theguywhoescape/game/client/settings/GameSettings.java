@@ -12,9 +12,10 @@ public class GameSettings {
     public static final String
             NAME = "TheGuyWhoEscape",
             VERSION = "PreAlpha-1.0.0",
-            DESCRIPTION = "The description of my project.";
+            DESCRIPTION = "The description of my project.",
+            URL = "https://github.com/KIZAFOX/TheGuyWhoEscape";
 
-    public static final String[] authors = {"KIZAFOX"};
+    public static final String[] AUTHORS = {"KIZAFOX"};
 
     public static final float SCALE = 1.5F;
 

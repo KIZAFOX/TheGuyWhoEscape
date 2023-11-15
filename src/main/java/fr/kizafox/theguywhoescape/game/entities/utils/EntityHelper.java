@@ -1,5 +1,7 @@
 package fr.kizafox.theguywhoescape.game.entities.utils;
 
+import fr.kizafox.theguywhoescape.game.client.settings.GameSettings;
+
 import java.awt.geom.Rectangle2D;
 
 import static fr.kizafox.theguywhoescape.game.client.settings.GameSettings.*;
@@ -57,11 +59,13 @@ public class EntityHelper {
     }
 
     private static boolean isSolid(final float x, final float y, final int[][] levelData) {
-        if (x < 0 || x >= GAME_WIDTH){
-            return false;
+        final int maxWidth = levelData[0].length * TILES_SIZE;
+
+        if (x < 0 || x >= maxWidth){
+            return true;
         }
         if (y < 0 || y >= GAME_HEIGHT){
-            return false;
+            return true;
         }
 
         float xIndex = x / TILES_SIZE;

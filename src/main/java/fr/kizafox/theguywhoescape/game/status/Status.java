@@ -1,7 +1,7 @@
 package fr.kizafox.theguywhoescape.game.status;
 
 import fr.kizafox.theguywhoescape.game.client.window.Game;
-import fr.kizafox.theguywhoescape.game.client.window.ui.MenuButton;
+import fr.kizafox.theguywhoescape.game.client.window.ui.button.MenuButton;
 
 import java.awt.event.MouseEvent;
 
