@@ -25,13 +25,15 @@ public class Menu extends Status implements StatusCore {
 
     private final MenuButton[] buttons = new MenuButton[3];
 
-    private BufferedImage backgroundImage;
+    private BufferedImage menuBackground, backgroundImage;
     private int menuX, menuY, menuWidth, menuHeight;
 
     public Menu(Game game) {
         super(game);
         this.loadButtons();
         this.loadBackground();
+
+        this.menuBackground = ImageRenderer.loadSprite(ImageRenderer.BACKGROUND_MENU);
     }
 
     private void loadButtons() {
@@ -56,6 +58,7 @@ public class Menu extends Status implements StatusCore {
 
     @Override
     public void render(Graphics graphics) {
+        graphics.drawImage(this.menuBackground, 0, 0, GameSettings.GAME_WIDTH, GameSettings.GAME_HEIGHT, null);
         graphics.drawImage(this.backgroundImage, menuX, menuY, menuWidth, menuHeight, null);
         Arrays.stream(buttons).forEach(button -> button.render(graphics));
     }

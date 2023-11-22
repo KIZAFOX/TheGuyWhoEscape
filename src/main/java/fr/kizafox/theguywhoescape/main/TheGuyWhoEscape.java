@@ -2,6 +2,7 @@ package fr.kizafox.theguywhoescape.main;
 
 import fr.kizafox.theguywhoescape.game.client.settings.GameSettings;
 import fr.kizafox.theguywhoescape.game.client.window.Game;
+import fr.kizafox.theguywhoescape.game.utils.DiscordRich;
 
 import static fr.kizafox.theguywhoescape.game.utils.Colors.*;
 

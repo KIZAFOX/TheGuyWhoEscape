@@ -33,11 +33,11 @@ public class LevelManager {
 
     }
 
-    public void render(final Graphics graphics){
+    public void render(final Graphics graphics, final int levelOffset){
         for(int i = 0; i < TILES_IN_HEIGHT; i++){
-            for(int j = 0; j < TILES_IN_WIDTH; j++){
-                final int index = levelOne.getSpriteIndex(j, i);
-                graphics.drawImage(levelSprite[index], TILES_SIZE * j, TILES_SIZE * i, TILES_SIZE, TILES_SIZE, null);
+            for(int j = 0; j < this.levelOne.levelData()[0].length; j++){
+                final int index = this.levelOne.getSpriteIndex(j, i);
+                graphics.drawImage(this.levelSprite[index], TILES_SIZE * j - levelOffset, TILES_SIZE * i, TILES_SIZE, TILES_SIZE, null);
             }
         }
     }

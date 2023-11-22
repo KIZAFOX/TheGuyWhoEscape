@@ -6,7 +6,7 @@ import fr.kizafox.theguywhoescape.game.utils.ImageRenderer;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-import static fr.kizafox.theguywhoescape.game.entities.utils.EntityConstants.UI.Buttons.*;
+import static fr.kizafox.theguywhoescape.game.utils.Constants.UI.Buttons.*;
 
 /**
  * Created at 14/11/2023 at 02:59

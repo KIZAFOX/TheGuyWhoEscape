@@ -23,16 +23,15 @@ public abstract class Entity {
         this.height = height;
     }
 
-    protected Entity() {
-    }
-
     public abstract void update();
 
-    public abstract void render(final Graphics graphics);
+    public abstract void update(final int[][] levelData);
 
-    protected void renderHitBox(final Graphics graphics){
+    public abstract void render(final Graphics graphics, final int levelOffset);
+
+    protected void renderHitBox(final Graphics graphics, final int levelOffset){
         graphics.setColor(Color.RED);
-        graphics.drawRect((int) this.hitBox.x, (int) this.hitBox.y, (int) this.hitBox.width, (int) this.hitBox.height);
+        graphics.drawRect((int) this.hitBox.x - levelOffset, (int) this.hitBox.y, (int) this.hitBox.width, (int) this.hitBox.height);
     }
 
     protected void initHitBox(final float x, final float y, final int width, final int height){

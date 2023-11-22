@@ -6,15 +6,16 @@ import fr.kizafox.theguywhoescape.game.client.window.ui.button.UrmButton;
 import fr.kizafox.theguywhoescape.game.client.window.ui.button.VolumeButton;
 import fr.kizafox.theguywhoescape.game.status.GameStatus;
 import fr.kizafox.theguywhoescape.game.status.sub.Playing;
+import fr.kizafox.theguywhoescape.game.utils.Colors;
 import fr.kizafox.theguywhoescape.game.utils.ImageRenderer;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
-import static fr.kizafox.theguywhoescape.game.entities.utils.EntityConstants.UI.PauseButtons.*;
-import static fr.kizafox.theguywhoescape.game.entities.utils.EntityConstants.UI.URMButtons.*;
-import static fr.kizafox.theguywhoescape.game.entities.utils.EntityConstants.UI.VolumeButtons.*;
+import static fr.kizafox.theguywhoescape.game.utils.Constants.UI.PauseButtons.*;
+import static fr.kizafox.theguywhoescape.game.utils.Constants.UI.URMButtons.*;
+import static fr.kizafox.theguywhoescape.game.utils.Constants.UI.VolumeButtons.*;
 import static fr.kizafox.theguywhoescape.game.client.settings.GameSettings.*;
 
 /**
@@ -143,7 +144,10 @@ public class PauseOverlay {
             }
         }else if(this.isIn(event, this.replayButton)){
             if(this.replayButton.isMousePressed()){
-                System.out.println("Replay level stage!");
+                this.playing.resetAll();
+                this.playing.unpauseGame();
+
+                System.out.println(Colors.RED_BOLD + "Player has restarted the game.");
             }
         }else if(this.isIn(event, this.unpauseButton)){
             if(this.unpauseButton.isMousePressed()){

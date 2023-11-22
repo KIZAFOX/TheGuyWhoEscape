@@ -1,9 +1,11 @@
 package fr.kizafox.theguywhoescape.game.client.window;
 
+import fr.kizafox.theguywhoescape.game.client.settings.GameSettings;
 import fr.kizafox.theguywhoescape.game.status.GameStatus;
 import fr.kizafox.theguywhoescape.game.status.sub.Menu;
 import fr.kizafox.theguywhoescape.game.status.sub.Playing;
 import fr.kizafox.theguywhoescape.game.utils.Colors;
+import fr.kizafox.theguywhoescape.game.utils.DiscordRich;
 import fr.kizafox.theguywhoescape.game.utils.FPSChecker;
 
 import java.awt.*;
@@ -30,18 +32,23 @@ public class Game{
     public Game() {
         final Instant startTime = Instant.now();
 
+        System.out.println(Colors.YELLOW + "Game Informations :\n");
+
         this.menu = new Menu(this);
         this.playing = new Playing(this);
 
         this.gamePanel = new GamePanel(this);
         this.gameWindow = new GameWindow(this.gamePanel);
+        this.gamePanel.setFocusable(true);
         this.gamePanel.requestFocus();
 
         this.fpsChecker = new FPSChecker(this);
 
         new Thread(this.fpsChecker).start();
 
-        System.out.printf(Colors.GREEN_UNDERLINED + "Game launched successfully in %ss !\n\n", (Duration.between(startTime, Instant.now()).toMillis()));
+        new DiscordRich(this.playing, "1176340328270278687");
+
+        System.out.printf("\n" + Colors.GREEN_UNDERLINED + "Game launched successfully in %ss !\n\n", (Duration.between(startTime, Instant.now()).toMillis()));
     }
 
     public void update(){
